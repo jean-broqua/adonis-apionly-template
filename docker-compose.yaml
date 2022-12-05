@@ -6,3 +6,12 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
+
+  redis:
+    image: redis
+    command: redis-server --requirepass PASSWORD --appendonly yes
+    hostname: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - /home/duducp/Redis:/var/lib/postgresql/data
