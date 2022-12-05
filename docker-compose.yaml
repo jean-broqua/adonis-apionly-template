@@ -1,7 +1,6 @@
 services:
   database:
     image: postgres
-    container_name: beepdigital-api-db
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
